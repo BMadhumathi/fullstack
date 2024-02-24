@@ -39,8 +39,7 @@ export default function AdminNav() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {[{name : 'My Profile',link : "/profile"}, 
-        {name:'DashBoard',link:"/chart"}, 
+        {[ 
         {name:'Applied Loans',link:"/appliedloans"}, 
         {name:'Loan Details',link:"/loandetails"}, 
         {name:'Logout',link:"/"},
@@ -64,7 +63,7 @@ export default function AdminNav() {
       {['left'].map((anchor) => (
         <React.Fragment key={anchor}>
           <Button onClick={toggleDrawer(anchor, true)}>
-          <MenuIcon style={{ color: "black" }} />
+          <MenuIcon style={{ color: "white" }} />
           </Button>
           <Drawer
             anchor={anchor}

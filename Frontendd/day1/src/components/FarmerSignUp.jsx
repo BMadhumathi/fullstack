@@ -2,8 +2,8 @@ import { useState } from "react";
 import { TextField } from "@mui/material";
 import {useNavigate } from 'react-router-dom'; 
 import '../assets/css/FarmerLogin.css';
-import back from "../assets/images/farmer.png";
-import ButtonAppBar from "./Navbar";
+import back from "../assets/images/federico-respini-sYffw0LNr7s-unsplash.jpg";
+
 
 function FarmerSignUp() {
     const navigate = useNavigate(); 
@@ -76,7 +76,6 @@ function FarmerSignUp() {
     return (
         <>
             <div>
-                <ButtonAppBar />
                 <div id="img" style={{ backgroundColor: "green", backgroundImage: `url(${back})` }} data-overlay="5">
                 <div>
                         <div className="parent" >

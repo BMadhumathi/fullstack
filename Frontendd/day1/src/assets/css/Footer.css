@@ -16,7 +16,7 @@
 } */
 
 .footer-distributed{
-    background: rgb(8, 165, 8);
+    background: rgb(0, 0, 0);
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
 	width: 100%;
@@ -141,7 +141,7 @@
 
 .footer-distributed .footer-company-about{
 	line-height: 20px;
-	color:  #000000;
+	color:  #ede8e8;
 	font-size: 13px;
 	font-weight: normal;
 	margin: 0;

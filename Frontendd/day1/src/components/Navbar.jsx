@@ -1,7 +1,6 @@
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import Button from '@mui/material/Button';
 import '../assets/css/Navbar.css';
 import '../assets/css/Profile.css';
 import { Link, useNavigate } from 'react-router-dom';
@@ -16,14 +15,14 @@ export default function ButtonAppBar() {
           <Link to = "/" id="header">AGRO FUNDX</Link>
           <div id="totalnav">
           <Link to = "/about" id="navbar">About</Link>
-          <Link to = "/" id="navbar">Career</Link>
+          <Link to = "/career" id="navbar">Mission</Link>
           <Link to = "/contact" id="navbar">Contact</Link>
           </div>
           <div id="l">
-          <Button id="login2" onClick={()=>navigate("/farmerlogin")} color="inherit">Login</Button>
           </div>
           </Toolbar>
-      </AppBar>
-    </Box>
+          </AppBar>
+          </Box>
+          //   <Button id="login2" onClick={()=>navigate("/farmerlogin")} color="inherit">Login</Button>
   );
 }

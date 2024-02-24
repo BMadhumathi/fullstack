@@ -293,3 +293,25 @@ body {
         padding-top: 100px !important;;
         color: black !important;
     }
+    .profile-section {
+      display: flex;
+      align-items: center;
+      padding-left: 2rem;
+      color: #274326;
+    }
+    
+    .profile-avatar img {
+      color: #151515;
+      border-color: #151515;
+      border-radius: 50%;
+      width: 4rem;
+      height: 4rem;
+    }
+    
+    .profile-details {
+      margin-left: 1rem;
+    }
+    
+    .op{
+      padding-left: 340px;
+    }

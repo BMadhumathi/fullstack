@@ -3,9 +3,8 @@ import { useEffect, useState } from "react";
 import { TextField } from "@mui/material";
 import { useNavigate } from 'react-router-dom';
 import { HashLoader } from "react-spinners";
-import ButtonAppBar from "./Navbar";
 import '../assets/css/FarmerLogin.css';  // Make sure to import your CSS file
-import back from "../assets/images/farmer.png";
+import back from "../assets/images/federico-respini-sYffw0LNr7s-unsplash.jpg";
 
 // FarmerLogin component
 function FarmerLogin() {
@@ -49,8 +48,13 @@ function FarmerLogin() {
 
         // Check if both email and password are valid
         if (!emailError && !passwordError && email && password) {
-            // Navigate to farmerhome if email and password are valid
-            navigate("/farmerhome");
+            if (email.toLowerCase() === 'admin@gmail.com') {
+                // Navigate to adminhome if the email is admin@gmail.com
+                navigate("/adminhome");
+            } else {
+                // Navigate to farmerhome for other emails
+                navigate("/farmerhome");
+            }
         } else {
             // Display an error message or prevent navigation
             console.log("Invalid email or password");
@@ -66,7 +70,6 @@ function FarmerLogin() {
             ) : (
                 <>
                     <div>
-                        <ButtonAppBar />
                         <div id="img" style={{ backgroundColor: "green", backgroundImage: `url(${back})` }} data-overlay="5">
                         <div>
                                 <div className="parent">
@@ -82,6 +85,8 @@ function FarmerLogin() {
                                                     value={email}
                                                     onChange={(e) => setEmail(e.target.value)}
                                                     onBlur={validateEmail}
+                                                    autoComplete="off"  // Add this line to disable autofill for email
+
                                                 />
                                                 <span className="error-message">{emailError}</span>
                                                 <br />
@@ -101,8 +106,8 @@ function FarmerLogin() {
                                                     <div className="but1">
                                                         <button onClick={handleSignIn} className="but2">Sign in</button>
                                                     </div>
-                                                    <p> Dont Have an Account?</p>
-                                                    <a href="/farmersignup" id="link-button">Sign Up</a>
+                                                    <p style={{color:"black"}}> Dont Have an Account?</p>
+                                                    <a href="/farmersignup" id="link-button"  style={{color:"black"}}>Sign Up</a>
                                                 </div>
                                             </center>
                                         </div>
